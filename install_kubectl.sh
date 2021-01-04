@@ -1,0 +1,1 @@
+arkade get kubectl
