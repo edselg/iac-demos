@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo apt-get update
 
 sudo apt-get install \
@@ -18,3 +20,7 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 sudo usermod -aG docker $USER
+
+IP_ADDRESS=`hostname -I | tr -d ' '`
+echo '{ "insecure-registries": [ "'${IP_ADDRESS}'" ] }' > /tmp/daemon.json
+sudo mv /tmp/daemon.json /etc/docker
