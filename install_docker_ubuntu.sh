@@ -21,4 +21,4 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 sudo usermod -aG docker $USER
 
-sudo cp daemon.json /etc/docker
+sudo cp ~/iac-demos/daemon.json /etc/docker
